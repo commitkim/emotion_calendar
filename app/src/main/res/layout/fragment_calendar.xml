@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".CalendarFragment">
+
+        <LinearLayout
+            android:id="@+id/yearMonthView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/calendarView"
+            app:layout_constraintVertical_bias=".9"
+            >
+
+            <TextView
+                android:id="@+id/yearView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_margin="5dp"
+                android:text="2022"
+                />
+
+            <TextView
+                android:id="@+id/monthView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_margin="5dp"
+
+                android:text="5"
+                />
+
+        </LinearLayout>
+
+        <com.kizitonwose.calendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:cv_scrollMode="paged"
+            app:cv_dayViewResource="@layout/item_calendar_day"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <ImageButton
+            android:id="@+id/diaryButtonView"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/calendarView"
+            app:layout_constraintVertical_bias=".1"
+            app:layout_constraintHorizontal_bias=".9"
+            android:src="@drawable/diary"
+            android:scaleType="fitXY"
+            android:background="@android:color/transparent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

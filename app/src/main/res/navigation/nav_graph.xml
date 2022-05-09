@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/calendarFragment">
+
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.example.emotioncalendar.CalendarFragment"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" >
+        <action
+            android:id="@+id/action_calendarFragment_to_memoListFragment"
+            app:destination="@id/memoListFragment" />
+        <action
+            android:id="@+id/action_calendarFragment_to_writeFragment"
+            app:destination="@id/writeFragment" />
+        <action
+            android:id="@+id/action_calendarFragment_to_memoDetailFragment"
+            app:destination="@id/memoDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/memoListFragment"
+        android:name="com.example.emotioncalendar.MemoListFragment"
+        android:label="fragment_memo_list"
+        tools:layout="@layout/fragment_memo_list" />
+    <fragment
+        android:id="@+id/writeFragment"
+        android:name="com.example.emotioncalendar.WriteFragment"
+        android:label="fragment_write"
+        tools:layout="@layout/fragment_write" >
+        <argument
+            android:name="day"
+            app:argType="java.time.LocalDate" />
+        <action
+            android:id="@+id/action_writeFragment_to_calendarFragment"
+            app:destination="@id/calendarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/memoDetailFragment"
+        android:name="com.example.emotioncalendar.MemoDetailFragment"
+        android:label="MemoDetailFragment" >
+        <argument
+            android:name="date"
+            app:argType="string" />
+    </fragment>
+</navigation>

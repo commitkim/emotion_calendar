@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.EmotionCalendar" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#e0d3c4</item>
+        <item name="colorPrimaryVariant">#a97c52</item>
+        <item name="colorOnPrimary">#aa9981</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#934d15</item>
+        <item name="colorSecondaryVariant">#5c2900</item>
+        <item name="colorOnSecondary">#aa9981</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>
